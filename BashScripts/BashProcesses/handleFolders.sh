@@ -6,9 +6,9 @@ if ! [ -d "SplitedFiles" ]; then
         mkdir SplitedFiles
 fi
 
-if ! [ -d "data" ]; then
-        echo -e "Creating data Folder\n"
-        mkdir data
+if ! [ -d "Containers-data" ]; then
+        echo -e "Creating Containers-data Folder\n"
+        mkdir Containers-data
 fi
 
 if ! [ -d "LargeTgzFiles" ]; then
@@ -16,10 +16,10 @@ if ! [ -d "LargeTgzFiles" ]; then
         mkdir LargeTgzFiles
 fi
 
-folders=$(ls -d data/*/)
+folders=$(ls -d Containers-data/*/)
 for folder in $folders; do
         folderPath=${folder::-1}
-        folderName=${folder:5:-1} 
+        folderName=${folder:16:-1} 
 
     if ! [ -d "SplitedFiles/$folderName" ]; then
             echo "Creating $folderName Folder in SplitedFiles"
@@ -38,9 +38,9 @@ for folder in $folders; do
     folderPath=${folder::-1}
     folderName=${folder:13:-1} 
 
-    if ! [ -d "data/$folderName" ]; then
-            echo "Creating $folderName Folder in data"
-            mkdir data/$folderName
+    if ! [ -d "Containers-data/$folderName" ]; then
+            echo "Creating $folderName Folder in Containers-data"
+            mkdir Containers-data/$folderName
     fi
     
     if ! [ -d "LargeTgzFiles/$folderName" ]; then

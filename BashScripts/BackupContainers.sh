@@ -1,10 +1,10 @@
 #!/bin/env bash
 echo -e "\nStarting Backup the Containers"
-    bash BashScripts/BashProcesses/deleteCompressedFiles.sh
-    bash BashScripts/BashProcesses/handleFolders.sh
-    bash BashScripts/BashProcesses/compressContainersData.sh
-    bash BashScripts/BashProcesses/splitContainersData.sh
-    bash BashScripts/BashProcesses/backupContainersData.sh
+    bash ~/OtoCLI/BashScripts/BashProcesses/deleteCompressedFiles.sh
+    bash ~/OtoCLI/BashScripts/BashProcesses/handleFolders.sh
+    bash ~/OtoCLI/BashScripts/BashProcesses/compressContainersData.sh
+    bash ~/OtoCLI/BashScripts/BashProcesses/splitContainersData.sh
+    bash ~/OtoCLI/BashScripts/BashProcesses/backupContainersData.sh
 echo -e "\nFinished Backup of the Containers\n"
 
 echo -e "\nChecking sudo docker Compose ps Output:"

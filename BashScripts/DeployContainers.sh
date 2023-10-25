@@ -1,8 +1,8 @@
 #!/bin/env bash
 echo -e "\nStarting the Deploy of the Containers"
-    bash  BashScripts/BashProcesses/handleFolders.sh
-    bash  BashScripts/BashProcesses/unsplitContainersData.sh
-    bash  BashScripts/BashProcesses/extractContainersData.sh
+    bash  ~/OtoCLI/BashScripts/BashProcesses/handleFolders.sh
+    bash  ~/OtoCLI/BashScripts/BashProcesses/unsplitContainersData.sh
+    bash  ~/OtoCLI/BashScripts/BashProcesses/extractContainersData.sh
     sudo docker compose up -d
 echo -e "\nFinished Deploy of the Containers\n"
 

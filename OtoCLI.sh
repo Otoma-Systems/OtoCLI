@@ -1,5 +1,4 @@
 #!/bin/env bash
-
 echo -e "\n-- Welcome to OtoCli, please chose an option: --"  
 
 while [ true ]; do
@@ -39,46 +38,46 @@ while [ true ]; do
     echo ""
 
     read -p "Option: " userSelectedOption
-    read -p "Your Selected Option is: $userSelectedOption, Thats Correct? (yes/no): " userConfirmation
+    read -p "Your Selected Option is: $userSelectedOption, Thats Correct? (y/n): " userConfirmation
 
-    if [ $userConfirmation == "yes" ]; then
-
+    if [ $userConfirmation == "y" ]; then
+        cd ~/ServerData
         case $userSelectedOption in
 
             "1")
-                bash BashScripts/SetupDocker.sh
+                bash ~/OtoCLI/BashScripts/SetupDocker.sh
                 break
                 ;;
             "2")
-                bash BashScripts/SetupNetData.sh
+                bash ~/OtoCLI/BashScripts/SetupNetData.sh
                 break
                 ;;
             "3")
-                bash BashScripts/DeployContainers.sh
+                bash ~/OtoCLI/BashScripts/DeployContainers.sh
                 break
                 ;;
             "4")
-                bash BashScripts/RestartAllContainers.sh
+                bash ~/OtoCLI/BashScripts/RestartAllContainers.sh
                 break
                 ;;
             "5")
-                bash BashScripts/BackupContainers.sh
+                bash ~/OtoCLI/BashScripts/BackupContainers.sh
                 break
                 ;;
             "6")
-                bash BashScripts/UpdateContainers.sh
+                bash ~/OtoCLI/BashScripts/UpdateContainers.sh
                 break
                 ;;
             "7")
-                bash BashScripts/BackupAndUpdateContainers.sh
+                bash ~/OtoCLI/BashScripts/BackupAndUpdateContainers.sh
                 break
                 ;;
             "8")
-                bash BashScripts/ClearAllContainersAndImages.sh
+                bash ~/OtoCLI/BashScripts/ClearAllContainersAndImages.sh
                 break
                 ;;
             "9")
-                bash BashScripts/ExtractSelectiveContainers.sh
+                bash ~/OtoCLI/BashScripts/ExtractSelectiveContainers.sh
                 break
                 ;;
             "10")
