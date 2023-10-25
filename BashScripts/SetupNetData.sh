@@ -1,0 +1,1 @@
+wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token RTfO_Itui0wb_DzXMSjBz5z3HYFZE4Amdvx8N4HKnQr4sJYzuiZZTh8upCu-cubePxeswWK2mUUSJxN4QMiyMIULNLD3Gl-5wrdZoCpshg_MWkpCngtdwhSNyGvJbS6VQE077gc --claim-rooms 006c7d99-3678-444b-9469-1b5bdc4267a3 --claim-url https://app.netdata.cloud
