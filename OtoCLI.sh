@@ -216,33 +216,33 @@ while [ true ]; do
                             break
                             ;;
                         "R1")
-                            bash ~/ServerData/StartStack.sh -c
                             bash ~/OtoCLI/BashScripts/StopStack.sh -c
+                            bash ~/ServerData/StartStack.sh -c
                             break
                             ;;
                         "R2")
-                            bash ~/ServerData/StartStack.sh -e
                             bash ~/OtoCLI/BashScripts/StopStack.sh -e
+                            bash ~/ServerData/StartStack.sh -e
                             break
                             ;;
                         "R3")
-                            bash ~/ServerData/StartStack.sh -g
                             bash ~/OtoCLI/BashScripts/StopStack.sh -g
+                            bash ~/ServerData/StartStack.sh -g
                             break
                             ;;
                         "R4")
-                            bash ~/ServerData/StartStack.sh -n
                             bash ~/OtoCLI/BashScripts/StopStack.sh -n
+                            bash ~/ServerData/StartStack.sh -n
                             break
                             ;;
                         "R5")
-                            bash ~/ServerData/StartStack.sh -o
                             bash ~/OtoCLI/BashScripts/StopStack.sh -o
+                            bash ~/ServerData/StartStack.sh -o
                             break
                             ;;
                         "R6")
-                            bash ~/ServerData/StartStack.sh -a
                             bash ~/OtoCLI/BashScripts/StopStack.sh -a
+                            bash ~/ServerData/StartStack.sh -a
                             break
                             ;;
                         "E")
