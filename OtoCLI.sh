@@ -1,4 +1,47 @@
 #!/bin/env bash
+
+function initialSetupMenu(){
+    clear
+    echo "┏━━━━━━━━━━━━━━━ Initial Setups ━━━━━━━━━━━━━━━┓"
+    echo "┃----------------------------------------------┃"
+    echo "┃ Option 1 ---------------------- Setup Docker ┃"
+    echo "┃ Option 2 --------------------- Setup NetData ┃"
+    echo "┃----------------------------------------------┃"
+    echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+    echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    echo "┃----------------------------------------------┃"
+    echo "┃ Option E ----------------------- Exit OtoCli ┃"
+    echo "┃----------------------------------------------┃"
+    echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+
+    read -p "Option: " userSelectedOption
+
+    read -p "Your Selected Option is: $userSelectedOption, Thats Correct? (y/n): " userConfirmation
+
+    if [ $userConfirmation == "y" ]; then
+        cd ~/ServerData
+        case $userSelectedOption in
+
+            "1")
+                bash ~/OtoCLI/BashScripts/SetupDocker.sh
+                break
+                ;;
+            "2")
+                bash ~/OtoCLI/BashScripts/SetupNetData.sh
+                break
+                ;;
+            "E")
+                echo -e "OtoCli Finalized, Goodbye!\n"
+                Exit
+                ;;
+            *)
+                echo -e "\nPlease, chose a valid option!\n"
+                break
+                ;;
+        esac
+    fi
+}
+
 clear
 echo -e "\n-- Welcome to OtoCli, please chose an option: --"  
 
@@ -26,45 +69,7 @@ while [ true ]; do
     case $userSelectedOption in
 
             "1")
-                clear
-                echo "┏━━━━━━━━━━━━━━━ Initial Setups ━━━━━━━━━━━━━━━┓"
-                echo "┃----------------------------------------------┃"
-                echo "┃ Option 1 ---------------------- Setup Docker ┃"
-                echo "┃ Option 2 --------------------- Setup NetData ┃"
-                echo "┃----------------------------------------------┃"
-                echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-                echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
-                echo "┃----------------------------------------------┃"
-                echo "┃ Option E ----------------------- Exit OtoCli ┃"
-                echo "┃----------------------------------------------┃"
-                echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-
-                read -p "Option: " userSelectedOption
-
-                read -p "Your Selected Option is: $userSelectedOption, Thats Correct? (y/n): " userConfirmation
-
-                if [ $userConfirmation == "y" ]; then
-                    cd ~/ServerData
-                    case $userSelectedOption in
-
-                        "1")
-                            bash ~/OtoCLI/BashScripts/SetupDocker.sh
-                            break
-                            ;;
-                        "2")
-                            bash ~/OtoCLI/BashScripts/SetupNetData.sh
-                            break
-                            ;;
-                        "E")
-                            echo -e "OtoCli Finalized, Goodbye!\n"
-                            Exit
-                            ;;
-                        *)
-                            echo -e "\nPlease, chose a valid option!\n"
-                            break
-                            ;;
-                    esac
-                fi
+                initialSetupMenu();
                 break
                 ;;
             "2")
