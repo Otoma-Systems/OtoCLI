@@ -351,6 +351,7 @@ function extrasMenu(){
         echo "┏━━━━━━━━━━━━━━━━━━━ Extras ━━━━━━━━━━━━━━━━━━━┓"
         echo "┃----------------------------------------------┃"
         echo "┃ Option 1 --- Setup Stack Files on ServerData ┃"
+        echo "┃ Option 2 ---------------- Add OtoCLI to PATH ┃"
         echo "┃----------------------------------------------┃"
         echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -372,6 +373,10 @@ function extrasMenu(){
 
                 "1")
                     bash ~/OtoCLI/BashScripts/StackFiles/CopyStackFilesToServerData.sh
+                    exit 0
+                    ;;
+                "2")
+                    bash ~/OtoCLI/BashScripts/AddCliToPath.sh
                     exit 0
                     ;;
                 "B")
