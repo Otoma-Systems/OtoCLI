@@ -11,9 +11,9 @@ echo -e "\nStarting Clear All container and images"
 echo -e "\nFinished Clearing All container and images\n"
 
 echo -e "\nChecking sudo docker ps Output:"
-    sudo docker compose ps -a
+    sudo docker ps -a
 
 echo -e "\nChecking sudo docker images Output:"
-    sudo docker compose images
+    sudo docker images
 
 echo ""

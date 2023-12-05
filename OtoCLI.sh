@@ -219,56 +219,56 @@ function stackMenu(){
                     exit 0
                     ;;
                 "K1")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -C
+                    bash ~/ServerData/StopStack.sh -C
                     exit 0
                     ;;
                 "K2")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -E
+                    bash ~/ServerData/StopStack.sh -E
                     exit 0
                     ;;
                 "K3")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -G
+                    bash ~/ServerData/StopStack.sh -G
                     exit 0
                     ;;
                 "K4")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -N
+                    bash ~/ServerData/StopStack.sh -N
                     exit 0
                     ;;
                 "K5")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -O
+                    bash ~/ServerData/StopStack.sh -O
                     exit 0
                     ;;
                 "K6")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -A
+                    bash ~/ServerData/StopStack.sh -A
                     exit 0
                     ;;
                 "R1")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -C
+                    bash ~/ServerData/StopStack.sh -C
                     bash ~/ServerData/StartStack.sh -C
                     exit 0
                     ;;
                 "R2")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -E
+                    bash ~/ServerData/StopStack.sh -E
                     bash ~/ServerData/StartStack.sh -E
                     exit 0
                     ;;
                 "R3")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -G
+                    bash ~/ServerData/StopStack.sh -G
                     bash ~/ServerData/StartStack.sh -G
                     exit 0
                     ;;
                 "R4")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -N
+                    bash ~/ServerData/StopStack.sh -N
                     bash ~/ServerData/StartStack.sh -N
                     exit 0
                     ;;
                 "R5")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -O
+                    bash ~/ServerData/StopStack.sh -O
                     bash ~/ServerData/StartStack.sh -O
                     exit 0
                     ;;
                 "R6")
-                    bash ~/OtoCLI/BashScripts/StopStack.sh -A
+                    bash ~/ServerData/StopStack.sh -A
                     bash ~/ServerData/StartStack.sh -A
                     exit 0
                     ;;
@@ -351,7 +351,7 @@ function extrasMenu(){
         echo "  ┏━━━━━━━━━━━━━━━━━━━ Extras ━━━━━━━━━━━━━━━━━━━┓"
         echo "  ┃----------------------------------------------┃"
         echo "  ┃ Option 1 --- Setup Stack Files on ServerData ┃"
-        echo "  ┃ Option 2 ---------------- Add OtoCLI to PATH ┃"
+        echo "  ┃ Option 2 ------- Add OtoCLI to Bash Commands ┃"
         echo "  ┃----------------------------------------------┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"

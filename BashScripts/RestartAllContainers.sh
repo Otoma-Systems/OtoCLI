@@ -1,14 +1,14 @@
 #!/bin/env bash
-echo -e "\nRestarting all Containers in Compose"
+echo -e "\nRestarting all Containers in Stacks"
     echo -e "\nStoping and Deleting all Containers\n"
-    sudo docker compose down
+    bash ~/ServerData/StopStack.sh -A
 
 echo -e "\nStarting Containers\n"
-    sudo docker compose up -d
+    bash ~/ServerData/StartStack.sh -A
 
-echo -e "\nFinished Restarting all Containers in Compose\n"
+echo -e "\nFinished Restarting all Containers in Stacks\n"
 
-echo -e "\nChecking sudo docker Compose ps Output:"
-    sudo docker compose ps -a
+echo -e "\nChecking sudo docker ps Output:"
+    sudo docker ps -a
 
 echo ""

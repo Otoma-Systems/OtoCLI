@@ -7,10 +7,10 @@ echo -e "\nStarting Backup the Containers"
     bash ~/OtoCLI/BashScripts/BashProcesses/backupContainersData.sh
 echo -e "\nFinished Backup of the Containers\n"
 
-echo -e "\nChecking sudo docker Compose ps Output:"
-sudo docker compose ps -a
+echo -e "\nChecking sudo docker ps Output:"
+sudo docker ps -a
 
-echo -e "\nChecking sudo docker Compose images Output:"
-sudo docker compose images
+echo -e "\nChecking sudo docker images Output:"
+sudo docker images
 
 echo ""
