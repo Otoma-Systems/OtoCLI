@@ -351,7 +351,8 @@ function extrasMenu(){
         echo "  ┏━━━━━━━━━━━━━━━━━━━ Extras ━━━━━━━━━━━━━━━━━━━┓"
         echo "  ┃----------------------------------------------┃"
         echo "  ┃ Option 1 --- Setup Stack Files on ServerData ┃"
-        echo "  ┃ Option 2 ------- Add OtoCLI to Bash Commands ┃"
+        echo "  ┃ Option 2 ------- Make OtoCLI File Executable ┃"
+        echo "  ┃ Option 3 ------- Add OtoCLI to Bash Commands ┃"
         echo "  ┃----------------------------------------------┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -376,7 +377,11 @@ function extrasMenu(){
                     exit 0
                     ;;
                 "2")
-                    bash ~/OtoCLI/BashScripts/AddCliToPath.sh
+                    chmod +x ~/OtoCLI/OtoCLI.sh
+                    exit 0
+                    ;;
+                "3")
+                    bash ~/OtoCLI/BashScripts/AddCliToBash.sh
                     exit 0
                     ;;
                 "B")

@@ -1,7 +1,6 @@
 #!/bin/env bash
 echo -e "\nAdding OtoCLI Command to Bash"
     echo ""
-    chmod +x ~/OtoCLI/OtoCLI.sh
     echo -e "\n# OtoCLI Alias to run command directly on terminal" >> ~/.bash_aliases
     echo -e "alias otocli=' ~/OtoCLI/OtoCLI.sh'" >> ~/.bash_aliases
     echo -e "alias OtoCLI=' ~/OtoCLI/OtoCLI.sh'\n" >> ~/.bash_aliases
