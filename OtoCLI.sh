@@ -350,6 +350,11 @@ function extrasMenu(){
         echo "------------------------------------------------"
         echo "┏━━━━━━━━━━━━━━━━━━━ Extras ━━━━━━━━━━━━━━━━━━━┓"
         echo "┃----------------------------------------------┃"
+        echo "┃ Option 1 --- Setup Stack Files on ServerData ┃"
+        echo "┃----------------------------------------------┃"
+        echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+        echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+        echo "┃----------------------------------------------┃"
         echo "┃ Option B --------------------------- Go Back ┃"
         echo "┃ Option E ----------------------- Exit OtoCli ┃"
         echo "┃----------------------------------------------┃"
@@ -365,6 +370,10 @@ function extrasMenu(){
         if [ $userConfirmation == "y" ]; then
             case $userSelectedOption in
 
+                "1")
+                    bash ~/OtoCLI/BashScripts/StackFiles/CopyStackFilesToServerData.sh
+                    Exit 0
+                    ;;
                 "B")
                     clear
                     break
