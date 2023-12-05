@@ -8,14 +8,15 @@ echo -e "\nStarting Setup Of Stack Files"
 
         if [ $userConfirmation == "y" ]
         then
-            cp ~/OtoCLI/StackFiles/StartStack_example.sh ~/ServerData/StartStack.sh
+            cp ~/OtoCLI/BashScripts/StackFiles/StartStack_example.sh ~/ServerData/StartStack.sh
         fi
     else
-        cp ~/OtoCLI/StackFiles/StartStack_example.sh ~/ServerData/StartStack.sh
+
+        cp ~/OtoCLI/BashScripts/StackFiles/StartStack_example.sh ~/ServerData/StartStack.sh
     fi
 
     echo ""
-    
+
     if [ -e ~/ServerData/StopStack.sh ]
     then 
         echo "The file "StopStack.sh" already exist!" 
@@ -23,9 +24,9 @@ echo -e "\nStarting Setup Of Stack Files"
 
         if [ $userConfirmation == "y" ]
         then
-            cp ~/OtoCLI/StackFiles/StopStack_example.sh ~/ServerData/StopStack.sh
+            cp ~/OtoCLI/BashScripts/StackFiles/StopStack_example.sh ~/ServerData/StopStack.sh
         fi
     else
-        cp ~/OtoCLI/StackFiles/StopStack_example.sh ~/ServerData/StopStack.sh
+        cp ~/OtoCLI/BashScripts/StackFiles/StartStack_example.sh ~/ServerData/StopStack.sh
     fi
     echo ""
