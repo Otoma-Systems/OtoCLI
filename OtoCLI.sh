@@ -372,7 +372,7 @@ function extrasMenu(){
 
                 "1")
                     bash ~/OtoCLI/BashScripts/StackFiles/CopyStackFilesToServerData.sh
-                    Exit 0
+                    exit 0
                     ;;
                 "B")
                     clear
