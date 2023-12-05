@@ -13,8 +13,6 @@ function has_param() {
     done
 }
 
-clear
-
 if [[ -n $(has_param "-C --core -A --all" "$@") ]]; then
     sudo docker compose \
         -f Containers-compose/??/docker-compose.yml \
