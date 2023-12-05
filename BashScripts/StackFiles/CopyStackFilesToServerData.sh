@@ -27,6 +27,6 @@ echo -e "\nStarting Setup Of Stack Files"
             cp ~/OtoCLI/BashScripts/StackFiles/StopStack_example.sh ~/ServerData/StopStack.sh
         fi
     else
-        cp ~/OtoCLI/BashScripts/StackFiles/StartStack_example.sh ~/ServerData/StopStack.sh
+        cp ~/OtoCLI/BashScripts/StackFiles/StopStack_example.sh ~/ServerData/StopStack.sh
     fi
     echo ""
