@@ -1,13 +1,6 @@
 #!/bin/env bash
 echo -e "\nStarting Update of the Containers"
-    echo -e "\nStoping and Deleting all Containers and Images\n"
-    images=$(sudo docker images -q)
-    bash ~/ServerData/StopStack.sh -A
-    sudo docker rmi $images
-
-echo -e "\nStarting Containers\n"
-    bash ~/ServerData/StartStack.sh -A
-
+    sudo docker compose -f ~/OtoCLI/Management/Docker-Compose.yaml -p ManagementStack up -d --pull always
 echo -e "\nFinished Update of the Containers\n"
 
 echo -e "\nChecking sudo docker ps Output:"

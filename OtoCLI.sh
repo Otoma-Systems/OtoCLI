@@ -32,7 +32,6 @@ function initialSetupMenu(){
         echo "  ┏━━━━━━━━━━━━━━━ Initial Setups ━━━━━━━━━━━━━━━┓"
         echo "  ┃----------------------------------------------┃"
         echo "  ┃ Setup 1 ----------------------- Setup Docker ┃"
-        echo "  ┃ Setup 2 ---------------------- Setup NetData ┃"
         echo "  ┃----------------------------------------------┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -54,10 +53,6 @@ function initialSetupMenu(){
 
                 "1")
                     bash ~/OtoCLI/BashScripts/SetupDocker.sh
-                    exit 0
-                    ;;
-                "2")
-                    bash ~/OtoCLI/BashScripts/SetupNetData.sh
                     exit 0
                     ;;
                 "B")
@@ -85,11 +80,8 @@ function dockerMenu(){
         echo "  ┃----------------------------------------------┃"
         echo "  ┃ Option 1 ----------------- Deploy Containers ┃"
         echo "  ┃ Option 2 ---------------- Restart Containers ┃"
-        echo "  ┃ Option 3 ----------------- Backup Containers ┃"
         echo "  ┃ Option 4 ----------------- Update Containers ┃"
-        echo "  ┃ Option 5 ------ Backup and Update Containers ┃"
         echo "  ┃ Option 6 -- Clear All Containers from Docker ┃"
-        echo "  ┃ Option 7 -------- Extract specific Container ┃"
         echo "  ┃----------------------------------------------┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -118,158 +110,12 @@ function dockerMenu(){
                     bash ~/OtoCLI/BashScripts/RestartAllContainers.sh
                     exit 0
                     ;;
-                "3")
-                    bash ~/OtoCLI/BashScripts/BackupContainers.sh
-                    exit 0
-                    ;;
                 "4")
                     bash ~/OtoCLI/BashScripts/UpdateContainers.sh
                     exit 0
                     ;;
-                "5")
-                    bash ~/OtoCLI/BashScripts/BackupAndUpdateContainers.sh
-                    exit 0
-                    ;;
                 "6")
                     bash ~/OtoCLI/BashScripts/ClearAllContainersAndImages.sh
-                    exit 0
-                    ;;
-                "7")
-                    bash ~/OtoCLI/BashScripts/ExtractSelectiveContainers.sh
-                    exit 0
-                    ;;
-                "B")
-                    clear
-                    break
-                    ;;
-                "E")
-                    exitWarning;
-                    ;;
-                *)
-                    invalidOptionWarning
-                    ;;
-            esac
-        fi
-    done
-}
-function stackMenu(){
-    while [ true ] ;
-    do
-        clear
-        echo "  ------ ## ---- Welcome to  OtoCli ---- ## ------"
-        echo "  ------------------------------------------------"
-        echo "  ┏━━━━━━━━━ Container Stack Operations ━━━━━━━━━┓"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┃ Operation S -------------------- Start Stack ┃"
-        echo "  ┃ Operation K --------------------- Stop Stack ┃"
-        echo "  ┃ Operation R ------------------ Restart Stack ┃"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-        echo "  ┏━━━━━━━━━ Container Stack Selections ━━━━━━━━━┓"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┃ Stack 1 ---------------------- Core Services ┃"
-        echo "  ┃ Stack 2 ----------------- Essential Services ┃"
-        echo "  ┃ Stack 3 ------------------- General Services ┃"
-        echo "  ┃ Stack 4 ------------- Non Essential Services ┃"
-        echo "  ┃ Stack 5 --------------------- Other Services ┃"
-        echo "  ┃ Stack 6 ----------------- All Above Services ┃"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┃ - Utilization: Operation + Stack. Ex: [S1] - ┃"
-        echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-        echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┃ Option B --------------------------- Go Back ┃"
-        echo "  ┃ Option E ----------------------- Exit OtoCli ┃"
-        echo "  ┃----------------------------------------------┃"
-        echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-        echo "  ------------------------------------------------"
-        echo ""
-
-        read -p "Option: " userSelectedOption
-
-        echo "Your Selected Option is: $userSelectedOption"
-        read -p "Thats Correct? (y/n): " userConfirmation
-
-        if [ $userConfirmation == "y" ]; then
-            cd ~/ServerData
-            case $userSelectedOption in
-
-                "S1")
-                    bash ~/ServerData/StartStack.sh -C
-                    exit 0
-                    ;;
-                "S2")
-                    bash ~/ServerData/StartStack.sh -E
-                    exit 0
-                    ;;
-                "S3")
-                    bash ~/ServerData/StartStack.sh -G
-                    exit 0
-                    ;;
-                "S4")
-                    bash ~/ServerData/StartStack.sh -N
-                    exit 0
-                    ;;
-                "S5")
-                    bash ~/ServerData/StartStack.sh -O
-                    exit 0
-                    ;;
-                "S6")
-                    bash ~/ServerData/StartStack.sh -A
-                    exit 0
-                    ;;
-                "K1")
-                    bash ~/ServerData/StopStack.sh -C
-                    exit 0
-                    ;;
-                "K2")
-                    bash ~/ServerData/StopStack.sh -E
-                    exit 0
-                    ;;
-                "K3")
-                    bash ~/ServerData/StopStack.sh -G
-                    exit 0
-                    ;;
-                "K4")
-                    bash ~/ServerData/StopStack.sh -N
-                    exit 0
-                    ;;
-                "K5")
-                    bash ~/ServerData/StopStack.sh -O
-                    exit 0
-                    ;;
-                "K6")
-                    bash ~/ServerData/StopStack.sh -A
-                    exit 0
-                    ;;
-                "R1")
-                    bash ~/ServerData/StopStack.sh -C
-                    bash ~/ServerData/StartStack.sh -C
-                    exit 0
-                    ;;
-                "R2")
-                    bash ~/ServerData/StopStack.sh -E
-                    bash ~/ServerData/StartStack.sh -E
-                    exit 0
-                    ;;
-                "R3")
-                    bash ~/ServerData/StopStack.sh -G
-                    bash ~/ServerData/StartStack.sh -G
-                    exit 0
-                    ;;
-                "R4")
-                    bash ~/ServerData/StopStack.sh -N
-                    bash ~/ServerData/StartStack.sh -N
-                    exit 0
-                    ;;
-                "R5")
-                    bash ~/ServerData/StopStack.sh -O
-                    bash ~/ServerData/StartStack.sh -O
-                    exit 0
-                    ;;
-                "R6")
-                    bash ~/ServerData/StopStack.sh -A
-                    bash ~/ServerData/StartStack.sh -A
                     exit 0
                     ;;
                 "B")
@@ -350,9 +196,8 @@ function extrasMenu(){
         echo "  ------------------------------------------------"
         echo "  ┏━━━━━━━━━━━━━━━━━━━ Extras ━━━━━━━━━━━━━━━━━━━┓"
         echo "  ┃----------------------------------------------┃"
-        echo "  ┃ Option 1 --- Setup Stack Files on ServerData ┃"
-        echo "  ┃ Option 2 ------- Make OtoCLI File Executable ┃"
-        echo "  ┃ Option 3 ------- Add OtoCLI to Bash Commands ┃"
+        echo "  ┃ Option 1 ------- Make OtoCLI File Executable ┃"
+        echo "  ┃ Option 2 ------- Add OtoCLI to Bash Commands ┃"
         echo "  ┃----------------------------------------------┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -373,14 +218,10 @@ function extrasMenu(){
             case $userSelectedOption in
 
                 "1")
-                    bash ~/OtoCLI/BashScripts/StackFiles/CopyStackFilesToServerData.sh
-                    exit 0
-                    ;;
-                "2")
                     chmod +x ~/OtoCLI/OtoCLI.sh
                     exit 0
                     ;;
-                "3")
+                "2")
                     bash ~/OtoCLI/BashScripts/AddCliToBash.sh
                     exit 0
                     ;;
@@ -411,8 +252,7 @@ function mainMenu(){
         echo "  ┃----------------------------------------------┃"
         echo "  ┃ Option 1 -------------------- Initial Setups ┃"
         echo "  ┃ Option 2 ---------------------------- Docker ┃"
-        echo "  ┃ Option 3 -------- Container Stack Management ┃"
-        echo "  ┃ Option 4 -------------------------- Zerotier ┃"
+        echo "  ┃ Option 3 -------------------------- Zerotier ┃"
         echo "  ┃ Option 0 ---------------------------- Extras ┃"
         echo "  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
         echo "  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
@@ -434,9 +274,6 @@ function mainMenu(){
                 dockerMenu;
                 ;;
             "3")
-                stackMenu;
-                ;;
-            "4")
                 zerotierMenu;
                 ;;
             "0")
