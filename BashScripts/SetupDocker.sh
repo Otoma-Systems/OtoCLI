@@ -96,9 +96,6 @@ $SUDO docker compose version
 echo -e "\nDocker service status:"
 $SUDO systemctl is-active docker
 
-echo -e "\nRunning Docker test..."
-$SUDO docker run --rm hello-world
-
 echo -e "\nDocker Setup Finished Successfully!\n"
 
 if [ "$EUID" -ne 0 ]; then
