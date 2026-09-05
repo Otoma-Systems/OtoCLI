@@ -12,7 +12,7 @@ if [ -z "$ZT_IP" ]; then
 fi
 
 echo "✅ Found ZeroTier IP: $ZT_IP"
-echo "🚀 Launching Docker Compose binding to ZeroTier..."
+echo "🚀 Creating .env file with Zerotier IP for Management Compose..."
 
 # 2. Define the .env file path, the key, and its new value
 ENV_FILE="~/OtoCLI/Management/.env"
