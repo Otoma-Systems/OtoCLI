@@ -15,7 +15,7 @@ echo "✅ Found ZeroTier IP: $ZT_IP"
 echo "🚀 Creating .env file with Zerotier IP for Management Compose..."
 
 # 2. Define the .env file path, the key, and its new value
-ENV_FILE="~/OtoCLI/Management/.env"
+ENV_FILE="$HOME/OtoCLI/Management/.env"
 KEY_NAME="ZT_IP"
 
 # 3. Ensure the .env file exists
