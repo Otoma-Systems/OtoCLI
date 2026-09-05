@@ -10,7 +10,7 @@ services:
       - ~/ServerData/dockhand/data:/app/data
       - ~/OtoCLI/Management:/mnt/Management-compose
     networks:
-      - proxy
+      - proxy_network
       
 networks:
   proxy:
