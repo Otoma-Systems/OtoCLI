@@ -5,6 +5,8 @@ services:
     restart: unless-stopped
     ports:
       - ${ZT_IP:-127.0.0.1}:20201:3000
+    environment:
+      - DISABLE_LOCAL_LOGIN: 'true'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ~/ServerData/dockhand/data:/app/data
