@@ -1,7 +1,6 @@
 #!/bin/env bash
 echo -e "\nStarting the Deploy of the Containers"
     bash  ~/OtoCLI/BashScripts/BashProcesses/handleFolders.sh
-    bash ~/OtoCLI/BashScripts/BashProcesses/getZerotierIP.sh
     docker network create proxy_network
     docker compose -f ~/OtoCLI/Management/Docker-Compose.yaml -p management-stack up --pull always -d
 
